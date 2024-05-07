@@ -1,6 +1,6 @@
 #Hyperparameter sweep
 import numpy as np
-val_loss = 0
+
 for hidden_channels in [5, 10, 15, 20, 25]:
     for num_layers in [2, 4, 6, 8, 10]:
         for dropout in [0.1, 0.2, 0.3, 0.4, 0.5]:

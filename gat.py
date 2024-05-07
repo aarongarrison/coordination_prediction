@@ -1,6 +1,6 @@
 #Hyperparameter sweep
-import numpy as np
 
+import numpy as np
 for hidden_channels in [5, 10, 15, 20, 25]:
     for num_layers in [2, 4, 6, 8, 10]:
         for dropout in [0.1, 0.2, 0.3, 0.4, 0.5]:
@@ -17,11 +17,12 @@ for hidden_channels in [5, 10, 15, 20, 25]:
                 loss_list = npzfile['loss_list']
 
                 #append the parameters
-                hc_list = list(hc_list).append(hidden_channels)
-                nl_list = list(nl_list).append(num_layers)
-                do_list = list(do_list).append(dropout)
-                act_list = list(act_list).append(activation)
-                loss_list = list(loss_list).append(val_loss)
+                hc_list = np.append(hc_list, hidden_channels)
+                print(hc_list, hidden_channels)
+                nl_list = np.append(nl_list, num_layers)
+                do_list = np.append(do_list, dropout)
+                act_list = np.append(act_list, activation)
+                loss_list = np.append(loss_list, val_loss)
 
                 #save parameters
                 np.savez(path, hc_list=hc_list, nl_list=nl_list, do_list=do_list, act_list=act_list, loss_list=loss_list)
