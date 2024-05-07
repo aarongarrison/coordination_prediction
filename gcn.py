@@ -18,7 +18,6 @@ for hidden_channels in [5, 10, 15, 20, 25]:
 
                 #append the parameters
                 hc_list = np.append(hc_list, hidden_channels)
-                print(hc_list, hidden_channels)
                 nl_list = np.append(nl_list, num_layers)
                 do_list = np.append(do_list, dropout)
                 act_list = np.append(act_list, activation)
