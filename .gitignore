@@ -2,7 +2,9 @@
 *.csv
 *.pkl
 figures/
-data/
+*.pt
+data/train_qm_normalization_params.npz
+saves/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
