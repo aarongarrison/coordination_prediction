@@ -131,8 +131,8 @@ if __name__=='__main__':
 
     save_path = save_path_dir+f'/sweep_{gnn_type}.npz'
 
-    train_load_path = data_path+'/train_dataset.pt'
-    val_load_path = data_path+'/val_dataset.pt'
+    train_load_path = data_path+'/train_dataset_smiles.pt'
+    val_load_path = data_path+'/val_dataset_smiles.pt'
 
     train_data = torch.load(train_load_path)
     val_data = torch.load(val_load_path)
