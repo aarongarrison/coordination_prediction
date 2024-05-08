@@ -3,6 +3,7 @@
 *.pkl
 figures/
 *.pt
+*.npz
 data/train_qm_normalization_params.npz
 saves/
 
